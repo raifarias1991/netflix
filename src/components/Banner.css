@@ -1,0 +1,205 @@
+/* 
+    CSS Styling for Banner Component
+    Estilização de Componente de Banner
+
+    This file contains responsive CSS for creating an attractive, full-screen banner 
+    Este arquivo contém CSS responsivo para criar um banner de tela cheia atraente
+*/
+
+/* 
+    Main Banner Container Styles
+    Estilos do Contêiner Principal do Banner 
+*/
+.banner-container {
+    position: relative; /* Positioning context for child elements / Contexto de posicionamento para elementos filhos */
+    height: 100vh; /* Full viewport height / Altura total da viewport */
+    color: white; /* White text color / Cor do texto branca */
+    display: flex; /* Flexbox layout / Layout flexbox */
+    flex-direction: column; /* Vertical stacking of items / Empilhamento vertical de itens */
+    justify-content: center; /* Center content vertically / Centralizar conteúdo verticalmente */
+    padding: 20px; /* Internal spacing / Espaçamento interno */
+    box-shadow: inset 0 -100px 100px rgba(0, 0, 0, 0.5); /* Inner shadow for contrast / Sombra interna para contraste */
+}
+
+/* 
+    Banner Gradient Overlay
+    Sobreposição de Gradiente no Banner 
+*/
+.banner::before {
+    content: ""; /* Empty pseudo-element / Pseudo-elemento vazio */
+    position: absolute; /* Positioned relative to parent / Posicionado em relação ao elemento pai */
+    top: 0; /* Align to top / Alinhar ao topo */
+    left: 0; /* Align to left / Alinhar à esquerda */
+    width: 100%; /* Full width / Largura total */
+    height: 100%; /* Full height / Altura total */
+    background: linear-gradient( /* Gradient for text readability / Gradiente para legibilidade do texto */
+        to top,
+        rgba(0, 0, 0, 0.8) 10%, /* Dark bottom / Escuro na parte inferior */
+        rgba(0, 0, 0, 0) 90% /* Transparent top / Transparente no topo */
+    );
+    z-index: 1; /* Layer positioning / Posicionamento de camada */
+}
+
+/* 
+    Banner Main Styles
+    Estilos Principais do Banner 
+*/
+.banner {
+    position: relative; /* Positioning context / Contexto de posicionamento */
+    width: 100%; /* Full width / Largura total */
+    height: 100vh; /* Full viewport height / Altura total da viewport */
+    background-size: cover; /* Image covers entire area / Imagem cobre toda a área */
+    background-position: center center; /* Centered image / Imagem centralizada */
+    background-repeat: no-repeat; /* Prevent image repetition / Impedir repetição da imagem */
+    overflow: hidden; /* Hide overflowing content / Ocultar conteúdo que ultrapassa */
+}
+
+/* 
+    Banner Content Styles
+    Estilos do Conteúdo do Banner 
+*/
+.banner-content {
+    position: absolute; /* Positioned relative to banner / Posicionado em relação ao banner */
+    bottom: 30px; /* Distance from bottom / Distância da parte inferior */
+    left: 20px; /* Distance from left / Distância da esquerda */
+    z-index: 2; /* Ensure content is on top / Garantir que o conteúdo fique por cima */
+    color: white; /* White text color / Cor do texto branca */
+    max-width: 600px; /* Maximum content width / Largura máxima do conteúdo */
+    margin-bottom: 50px; /* Bottom margin / Margem inferior */
+}
+
+/* 
+    Banner Title Styles
+    Estilos do Título do Banner 
+*/
+.banner-title {
+    font-size: 3.5rem; /* Large font size / Tamanho de fonte grande */
+    font-weight: bold; /* Bold text / Texto em negrito */
+    margin-bottom: 20px; /* Spacing below title / Espaçamento abaixo do título */
+    line-height: 1.2; /* Comfortable line height / Altura de linha confortável */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Text shadow for depth / Sombra de texto para profundidade */
+}
+
+/* 
+    Banner Description Styles
+    Estilos da Descrição do Banner 
+*/
+.banner-description {
+    width: 45rem; /* Wide description / Descrição larga */
+    padding-top: 1rem; /* Top padding / Preenchimento superior */
+    font-size: 1rem; /* Normal font size / Tamanho de fonte normal */
+    font-weight: 400; /* Regular font weight / Peso de fonte regular */
+    line-height: 1.3; /* Comfortable line height / Altura de linha confortável */
+    margin-bottom: 20px; /* Spacing below description / Espaçamento abaixo da descrição */
+    max-width: 360px; /* Maximum width / Largura máxima */
+    max-height: 4.5em; /* Maximum height / Altura máxima */
+    overflow: hidden; /* Hide overflowing text / Ocultar texto que ultrapassa */
+}
+
+/* 
+    Banner Description Heading Styles
+    Estilos do Título da Descrição do Banner 
+*/
+.banner-description h1 {
+    font-size: 1.3rem; /* Smaller heading size / Tamanho de título menor */
+    line-height: 1.5; /* Comfortable line height / Altura de linha confortável */
+    font-weight: normal; /* Normal font weight / Peso de fonte normal */
+    color: #f2f2f2; /* Light gray text color / Cor do texto cinza claro */
+    max-width: 600px; /* Maximum width / Largura máxima */
+    margin-top: 15px; /* Top margin / Margem superior */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); /* Subtle text shadow / Sombra de texto sutil */
+}
+
+/* 
+    Banner Buttons Container
+    Contêiner de Botões do Banner 
+*/
+.banner-button-container {
+    margin-top: 20px; /* Top margin / Margem superior */
+    display: flex; /* Flexbox layout / Layout flexbox */
+    gap: 15px; /* Space between buttons / Espaço entre botões */
+    margin-bottom: 25px; /* Bottom margin / Margem inferior */
+}
+
+/* 
+    Banner Buttons Styles
+    Estilos dos Botões do Banner 
+*/
+.banner-buttons {
+    display: flex; /* Flexbox layout / Layout flexbox */
+    gap: 10px; /* Space between buttons / Espaço entre botões */
+}
+
+/* 
+    Generic Button Styles
+    Estilos de Botão Genéricos 
+*/
+.banner-button {
+    cursor: pointer; /* Pointer cursor on hover / Cursor de ponteiro ao passar */
+    padding: 14px 30px; /* Internal spacing / Espaçamento interno */
+    font-size: 1.1rem; /* Button text size / Tamanho do texto do botão */
+    border-radius: 3px; /* Slightly rounded corners / Cantos levemente arredondados */
+    border: none; /* Remove border / Remover borda */
+    font-weight: bold; /* Bold text / Texto em negrito */
+    text-transform: uppercase; /* Uppercase text / Texto em maiúsculas */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions / Transições suaves */
+    display: flex; /* Flexbox layout / Layout flexbox */
+    align-items: center; /* Center items vertically / Centralizar itens verticalmente */
+    justify-content: center; /* Center items horizontally / Centralizar itens horizontalmente */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow / Sombra sutil */
+}
+
+/* 
+    Play Button Styles
+    Estilos do Botão de Reprodução 
+*/
+.banner-button.play {
+    background-color: #e50914; /* Netflix red / Vermelho Netflix */
+    color: white; /* White text / Texto branco */
+}
+
+.banner-button.play:hover {
+    background-color: #f40612; /* Slightly lighter red on hover / Vermelho um pouco mais claro ao passar */
+    transform: scale(1.05); /* Slight size increase / Aumento de tamanho leve */
+}
+
+/* 
+    My List Button Styles
+    Estilos do Botão "Minha Lista" 
+*/
+.banner-button.list {
+    background-color: rgba(255, 255, 255, 0.8); /* Translucent white / Branco translúcido */
+    color: black; /* Black text / Texto preto */
+    font-weight: normal; /* Normal font weight / Peso de fonte normal */
+}
+
+/* 
+    Hover Styles for Buttons
+    Estilos de Hover para Botões 
+*/
+.banner-button:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Translucent white / Branco translúcido */
+    color: black; /* Black text / Texto preto */
+    transition: all 0.2s; /* Smooth transition / Transição suave */
+}
+
+/* 
+    Responsive Design for Small Screens
+    Design Responsivo para Telas Pequenas 
+*/
+@media (max-width: 768px) {
+    .banner-title {
+        font-size: 2.5rem; /* Smaller title on mobile / Título menor em dispositivos móveis */
+        margin-bottom: 15px; /* Reduced margin / Margem reduzida */
+    }
+
+    .banner-button {
+        padding: 10px 20px; /* Smaller button padding / Preenchimento de botão menor */
+        font-size: 1rem; /* Smaller button text / Texto de botão menor */
+        font-weight: normal; /* Normal font weight / Peso de fonte normal */
+    }
+
+    .banner-description {
+        font-size: 1rem; /* Consistent description size / Tamanho de descrição consistente */
+    }
+}

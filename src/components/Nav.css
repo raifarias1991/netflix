@@ -1,0 +1,48 @@
+/* 
+    Navigation Container Styles
+    Estilos do Contêiner de Navegação
+*/
+.nav-container {
+    display: flex; /* Use flexbox for layout / Use flexbox para layout */
+    justify-content: space-between; /* Distribute space between items / Distribuir espaço entre itens */
+    align-items: center; /* Vertically center items / Centralizar itens verticalmente */
+    padding: 20px; /* Add padding around container / Adicionar preenchimento ao redor do contêiner */
+    position: fixed; /* Fix position at top of viewport / Fixar posição no topo da viewport */
+    top: 0; /* Align to top of screen / Alinhar ao topo da tela */
+    left: 0; /* Align to left of screen / Alinhar à esquerda da tela */
+    right: 0; /* Align to right of screen / Alinhar à direita da tela */
+    z-index: 1; /* Ensure navigation is above other elements / Garantir que a navegação fique acima de outros elementos */
+    transition: background-color 0.5s ease; /* Smooth background color transition / Transição suave de cor de fundo */
+    background-color: transparent; /* Initially transparent background / Fundo inicialmente transparente */
+
+    /* Animations / Animações */
+    transition-timing-function: ease-in; /* Acceleration curve for transition / Curva de aceleração para transição */
+    transition: all 0.5s; /* Transition all properties smoothly / Transição suave de todas as propriedades */
+}
+
+/* 
+    Navigation Container Black Variant
+    Variante em Preto do Contêiner de Navegação 
+*/
+.nav-container-black {
+    background-color: black; /* Solid black background / Fundo preto sólido */
+}
+
+/* 
+    Navigation Logo Styles
+    Estilos do Logo de Navegação 
+*/
+.nav-logo {
+    height: 60px; /* Fixed height for logo / Altura fixa para o logo */
+    object-fit: contain; /* Maintain aspect ratio / Manter proporção do aspecto */
+}
+
+/* 
+    Navigation Avatar Styles
+    Estilos do Avatar de Navegação 
+*/
+.nav-avatar {
+    height: 35px; /* Fixed height for avatar / Altura fixa para o avatar */
+    border-radius: 100%; /* Fully rounded shape / Forma completamente arredondada */
+    object-fit: contain; /* Maintain aspect ratio / Manter proporção do aspecto */
+}

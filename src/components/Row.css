@@ -1,0 +1,260 @@
+/* 
+Estilos gerais para o aplicativo de streaming de filmes
+General styles for the movie streaming application 
+*/
+body {
+    /* Definições de fonte e layout básico para toda a aplicação */
+    /* Basic font and layout settings for the entire application */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #141414; /* Cor de fundo escura, similar à Netflix / Dark background color, similar to Netflix */
+    color: #fff;
+}
+
+/* 
+Estilização do container principal das linhas de conteúdo
+Styling for the main content row container 
+*/
+.row-container {
+    padding: 20px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    color: white;
+}
+
+/* 
+Estilização do cabeçalho/título das linhas
+Styling for row headers/titles 
+*/
+.row-header {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+/* 
+Estilização da barra de categorias para rolagem horizontal
+Styling for category bar with horizontal scrolling 
+*/
+.category-bar {
+    display: flex;
+    overflow-x: auto; /* Permite rolagem horizontal / Allows horizontal scrolling */
+    padding-bottom: 10px; /* Espaço para rolagem suave / Space for smooth scrolling */
+    scrollbar-width: thin; /* Largura da barra de rolagem no Firefox / Scrollbar width in Firefox */
+    scrollbar-color: transparent transparent; /* Cor da barra de rolagem / Scrollbar color */
+    -webkit-overflow-scrolling: touch; /* Rolagem suave em dispositivos móveis / Smooth scrolling on mobile */
+}
+
+/* 
+Personalização da barra de rolagem para navegadores Webkit 
+Scrollbar customization for Webkit browsers 
+*/
+.category-bar::-webkit-scrollbar {
+    height: 8px; /* Altura da barra de rolagem / Scrollbar height */
+}
+
+.category-bar::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Barra de rolagem invisível / Invisible scrollbar */
+}
+
+.category-bar::-webkit-scrollbar-track {
+    background: transparent; /* Fundo da barra de rolagem transparente / Transparent scrollbar track */
+}
+
+/* 
+Estilização dos cartões de categoria 
+Category card styling 
+*/
+.category-card {
+    flex: 0 0 180px; /* Largura fixa / Fixed width */
+    margin-right: 15px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out; /* Transição suave de transformação / Smooth transform transition */
+}
+
+.category-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Ajuste de imagem para cobrir o container / Image fit to cover container */
+    border-radius: 8px; /* Cantos arredondados / Rounded corners */
+}
+
+/* 
+Estilo especial para categorias em destaque 
+Special styling for trending categories 
+*/
+.category-card.trending {
+    flex: 0 0 220px; /* Largura maior para destaque / Larger width for highlight */
+}
+
+.category-card.trending img {
+    height: 220px; /* Altura maior para imagens em destaque / Larger height for highlighted images */
+}
+
+/* 
+Efeito de interação ao passar o mouse 
+Hover interaction effect 
+*/
+.category-card:hover {
+    transform: scale(1.05); /* Leve ampliação / Slight enlargement */
+}
+
+.category-name {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* 
+Estilização do container de cartões de filmes 
+Movie cards container styling 
+*/
+.row-cards {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll; /* Rolagem horizontal / Horizontal scrolling */
+    padding: 20px;
+    padding-bottom: 10px; /* Espaço para rolagem / Scrolling space */
+    scrollbar-width: thin; /* Largura da barra de rolagem / Scrollbar width */
+    scrollbar-color: transparent transparent; /* Cor da barra de rolagem / Scrollbar color */
+    -webkit-overflow-scrolling: touch; /* Rolagem suave em mobile / Smooth mobile scrolling */
+}
+
+/* 
+Personalização da barra de rolagem para filmes 
+Movie scrollbar customization 
+*/
+.row-cards::-webkit-scrollbar {
+    height: 8px; /* Altura da barra / Scrollbar height */
+}
+
+.row-cards::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Barra invisível / Invisible scrollbar */
+}
+
+.row-cards::-webkit-scrollbar-track {
+    background: transparent; /* Fundo transparente / Transparent background */
+}
+
+/* 
+Estilização dos cartões de filme 
+Movie card styling 
+*/
+.movie-card {
+    object-fit: contain;
+    flex: 0 0 auto; /* Alinhamento horizontal / Horizontal alignment */
+    margin-right: 10px;
+    width: 200px;
+    max-height: 300px;
+    margin-bottom: 10px;
+    cursor: pointer; /* Cursor de interação / Interaction cursor */
+    transition: transform 0.3s ease-in-out; /* Transição suave / Smooth transition */
+}
+
+/* 
+Estilo para cartões de filme em tamanho grande 
+Large movie card styling 
+*/
+.movie-card-large {
+    width: 250px; /* Largura maior / Larger width */
+    max-height: 600px; 
+    object-fit: cover; /* Ajuste de imagem / Image adjustment */
+    margin-bottom: 10px;
+    border-radius: 8px; /* Cantos arredondados / Rounded corners */
+    transition: transform 450ms ease-in-out;
+}
+
+/* 
+Efeitos de hover para cartões de filme 
+Movie card hover effects 
+*/
+.movie-card-large:hover,
+.movie-card:hover {
+    transform: scale(1.05); /* Ampliação suave / Smooth enlargement */
+}
+
+.movie-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px; /* Cantos arredondados / Rounded corners */
+}
+
+/* 
+Estilos de botão para assistir 
+Watch button styling 
+*/
+.button-watch-now {
+    background-color: #e50914; /* Cor vermelha da Netflix / Netflix red color */
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.button-watch-now:hover {
+    background-color: #f40612; /* Variação de cor no hover / Color variation on hover */
+}
+
+/* 
+Wrapper para reprodutor de vídeo 
+Video player wrapper 
+*/
+.player-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro semi-transparente / Semi-transparent dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Garante que fique sobre outros elementos / Ensures it's above other elements */
+}
+
+.player-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* 
+Responsividade para dispositivos móveis 
+Mobile responsiveness 
+*/
+@media screen and (max-width: 768px) {
+    .category-card, .movie-card {
+        min-width: 120px; /* Largura mínima para mobile / Minimum width for mobile */
+    }
+
+    .category-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .row-header {
+        font-size: 20px; /* Redução do tamanho da fonte / Font size reduction */
+    }
+
+    .movie-card {
+        width: 150px;
+        height: 225px;
+    }
+}
